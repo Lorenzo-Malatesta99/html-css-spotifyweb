@@ -11,6 +11,15 @@ html {
   font-style: normal;
 }
 
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+
 a {
   color: currentColor;
   text-decoration: none;
@@ -33,13 +42,7 @@ img {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
-}
-
-body {
-  display: flex;
-  margin: 0;
-  font-family: Arial, sans-serif;
+  flex-wrap: nowrap;
 }
 
 .sidebar {
@@ -130,3 +133,90 @@ body {
     color: white;
     margin-bottom: 20px;
 }
+
+.music-player{
+    width: 100%;
+    background-color: rgba(40, 40, 40, 1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cover{
+    width: 9%;
+    margin-left: 20px;
+}
+
+.name-song{
+    height: 85px;
+}
+
+.line-down{
+    width: 430px;
+    background-color: rgba(109, 109, 109, 1);
+    height: 4px;
+    border-radius: 999px;
+}
+.line-up{
+    width: 28%;
+    background-color: white;
+    height: 4px;
+    border-radius: 999px;
+}
+
+.line-volume{
+    width: 120px;
+    background-color: rgba(109, 109, 109, 1);
+    height: 4px;
+    border-radius: 999px;
+}
+
+.name-song{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.fldr-hrt{
+    margin-left: 2em;
+    display: flex;
+    gap: 1em;
+    color: rgba(109, 109, 109, 1);
+}
+
+.player-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.player-ctrl{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    font-size: 20px;
+}
+
+.time-ctrl{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fa-play{
+    border: 2px solid;
+    border-radius: 999px;
+    padding: 4px 6px;
+}
+
+.volumes{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+

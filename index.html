@@ -2,52 +2,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotifyweb</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/d5c21fc1cb.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
 </head>
 
 <body>
-    <header class="left-side">
-        <div class="sidebar">
-            <div class="container-nav">
-                <div class="logo">
-                    <a href="#"><img src="./img/logo.svg" alt="Logo"></a>
-                </div>
-                <ul class="nav">
-                    <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Cerca</a></li>
-                    <li><a href="#"><i class="fa-solid fa-book"></i> La tua libreria</a></li>
-                </ul>
-                <h3>Playlist</h3>
-                <ul class="playlist">
-                    <li><a href="#"><i class="fa-solid fa-plus"></i> Crea Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                </ul>
+    <div class="sidebar">
+        <div class="container-nav">
+            <div class="logo">
+                <a href="#"><img src="./img/logo.svg" alt="Logo" /></a>
             </div>
-            <div class="instal">
-                <div class="flex-instal">
-                    <a href="#"><i class="fa-solid fa-arrow-down"></i> Installa app</a>
+            <ul class="nav">
+                <li>
+                    <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Cerca</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-book"></i> La tua libreria</a>
+                </li>
+            </ul>
+            <h3>Playlist</h3>
+            <ul class="playlist">
+                <li>
+                    <a href="#"><i class="fa-solid fa-plus"></i> Crea Playlist</a>
+                </li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+            </ul>
+        </div>
+        <div class="instal">
+            <div class="flex-instal">
+                <a href="#"><i class="fa-solid fa-arrow-down"></i> Installa app</a>
+            </div>
+            <hr />
+            <div class="user">
+                <a href="#"><i class="fa-regular fa-user"></i> John Doe</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- music player -->
+
+    <div >
+        <div class="row music-player">
+            <div class="name-song">
+                <img class="cover" src="./img/sinister.jpeg" alt="album">
+                <div>
+                    <div>Sinister</div>
+                    <div>Brano Nome</div>
                 </div>
-                <hr>
-                <div class="user">
-                    <a href="#"><i class="fa-regular fa-user"></i> John Doe</a>
+                <div class="fldr-hrt">
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa-regular fa-folder"></i></button>
+                </div>
+            </div>
+            <div class="player-bar">
+                <div class="player-ctrl">
+                    <button><i class="fa-solid fa-shuffle"></i></button>
+                    <button><i class="fa-solid fa-backward-step"></i></button>
+                    <button><i class="fa-solid fa-play"></i></button>
+                    <button><i class="fa-solid fa-forward-step"></i></button>
+                    <button><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+                <div class="time-ctrl">
+                    <div>0:25</div>
+                    <div class="line-down">
+                        <div class="line-up"></div>
+                    </div>
+                    <div>4:35</div>
+                </div>
+            </div>
+            <div class="volumes">
+                <div><i class="fa-solid fa-list"></i></div>
+                <div><i class="fa-solid fa-tv"></i></div>
+                <div><i class="fa-solid fa-volume-high"></i></div>
+                <div>
+                    <div class="line-volume">
+                        <div class="line-up"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 </body>
 
 </html>
