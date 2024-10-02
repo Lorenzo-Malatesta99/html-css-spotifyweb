@@ -14,96 +14,109 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="container-nav">
-                <div class="logo">
-                    <a href="#"><img src="./img/logo.svg" alt="Logo" /></a>
+    <div class="app">
+        <div class="app__body">
+            <header class="sidebar">
+                <div class="container-nav">
+                    <div class="logo">
+                        <a href="#"><img src="./img/logo.svg" alt="Logo" /></a>
+                    </div>
+                    <ul class="nav">
+                        <li>
+                            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Cerca</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-book"></i> La tua libreria</a>
+                        </li>
+                    </ul>
+                    <h3>Playlist</h3>
+                    <ul class="playlist">
+                        <li>
+                            <a href="#"><i class="fa-solid fa-plus"></i> Crea Playlist</a>
+                        </li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                    </ul>
                 </div>
-                <ul class="nav">
-                    <li>
-                        <a href="#"><i class="fa-solid fa-house"></i> Home</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Cerca</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-solid fa-book"></i> La tua libreria</a>
-                    </li>
-                </ul>
-                <h3>Playlist</h3>
-                <ul class="playlist">
-                    <li>
-                        <a href="#"><i class="fa-solid fa-plus"></i> Crea Playlist</a>
-                    </li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                </ul>
-            </div>
-            <div class="instal">
-                <div class="flex-instal">
-                    <a href="#"><i class="fa-solid fa-arrow-down"></i> Installa app</a>
+                <div class="instal">
+                    <div class="flex-instal">
+                        <a href="#"><i class="fa-solid fa-arrow-down"></i> Installa app</a>
+                    </div>
+                    <hr />
+                    <div class="user">
+                        <a href="#"><i class="fa-regular fa-user"></i> John Doe</a>
+                    </div>
                 </div>
-                <hr />
-                <div class="user">
-                    <a href="#"><i class="fa-regular fa-user"></i> John Doe</a>
+            </header>
+            <main class="content">
+                <div class="upgrade">
+                    <div class="btn"><a href="#">EFFETTUA L'UPGRADE</a></div>
                 </div>
-            </div>
+            </main>
         </div>
-        <div class="content">
-            <div class="upgrade">
-                <div class="btn"><a href="#">EFFETTUA L'UPGRADE</a></div>
-            </div>
-        </div>
-    </div>
 
-    <!-- music player -->
+        <!-- music player -->
 
-    <div>
-        <div class="row music-player">
-            <div class="name-song">
-                <img class="cover" src="./img/sinister.jpeg" alt="album">
+
+        <aside class="app__player">
+            <div class="track">
+                <figure class="track__album-image">
+                    <img src="./img/sinister.jpeg" alt="" />
+                </figure>
+                <div class="track__info">
+                    <h3>Sinister</h3>
+                    <h4>Brano Nome</h4>
+                </div>
                 <div>
-                    <div>Sinister</div>
-                    <div>Brano Nome</div>
-                </div>
-                <div class="fldr-hrt">
                     <button><i class="fa-regular fa-heart"></i></button>
                     <button><i class="fa-regular fa-folder"></i></button>
                 </div>
             </div>
-            <div class="player-bar">
-                <div class="player-ctrl">
-                    <button><i class="fa-solid fa-shuffle"></i></button>
-                    <button><i class="fa-solid fa-backward-step"></i></button>
-                    <button><i class="fa-solid fa-play"></i></button>
-                    <button><i class="fa-solid fa-forward-step"></i></button>
-                    <button><i class="fa-solid fa-rotate-right"></i></button>
+            <div class="music-player">
+                <div class="player__ctrl">
+                    <button class="controls__icon">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </button>
+                    <button class="controls__icon">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </button>
+                    <button class="controls__icon icon__play">
+                        <i class="fa-regular fa-circle-play"></i>
+                    </button>
+                    <button class="controls__icon">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </button>
+                    <button class="controls__icon">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </button>
                 </div>
-                <div class="time-ctrl">
-                    <div>0:25</div>
-                    <div class="line-down">
-                        <div class="line-up"></div>
-                    </div>
-                    <div>4:35</div>
-                </div>
-            </div>
-            <div class="volumes">
-                <div><i class="fa-solid fa-list"></i></div>
-                <div><i class="fa-solid fa-tv"></i></div>
-                <div><i class="fa-solid fa-volume-high"></i></div>
-                <div>
-                    <div class="line-volume">
-                        <div class="line-up"></div>
-                    </div>
+                <div class="player__progress">
+                    <div class="progress__time">0:25</div>
+                    <div class="slider"></div>
+                    <div class="total__time">4:56</div>
                 </div>
             </div>
-        </div>
+            <div class="controls">
+                <button class="controls__icon icon__play">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+                <button class="controls__icon">
+                    <i class="fa-solid fa-display"></i>
+                </button>
+                <button class="controls__icon">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <div class="slider"></div>
+            </div>
+        </aside>
     </div>
 </body>
 
