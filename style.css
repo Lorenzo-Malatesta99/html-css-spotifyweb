@@ -29,6 +29,10 @@ ol {
   list-style: none;
 }
 
+img{
+  max-width: 100%;
+}
+
 /* General Rules ------------------------------- */
 
 :root {
@@ -39,6 +43,7 @@ ol {
   --white: #ffffff;
   --off-gray: #717171;
   --sidebar-width: 230px;
+  --sidebar-space-x: 22px;
 }
 
 body {
@@ -48,7 +53,16 @@ body {
 
 .row {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+}
+
+.col-2{
+  width: calc(100%/6);
+  min-width: 190px;
+}
+
+.col-gap{
+  padding: 10px;
 }
 
 .app {
@@ -58,11 +72,14 @@ body {
 }
 
 .btn {
+  
   padding: 10px 30px;
   border: 2px solid white;
-  margin: 30px 20px;
+  margin: 30px auto;
   border-radius: 999px;
   font-size: 10px;
+  width: 220px;
+  text-align: center;
 }
 
 .btn-hv:hover {
@@ -83,14 +100,24 @@ body {
 .content {
   flex-grow: 1;
   flex-shrink: 1;
-  background-color: rgba(20, 25, 34, 1);
+  background-color: rgb(20, 25, 34);
   color: white;
+  overflow-y: auto;
+  padding-top: 90px;
+  height: calc(99vh - 100px);
+}
+
+.album:hover{
+  
 }
 
 .upgrade {
-  background-color: rgba(8, 11, 18, 1);
-  display: flex;
-  flex-direction: row-reverse;
+  background-color: rgba(8, 11, 18, 0.493);
+  width: 100%;
+  position: fixed; 
+  top: 0;
+  z-index: 1000;
+  text-align: end;
 }
 
 .category {
@@ -102,42 +129,62 @@ body {
   padding: 20px 0px;
 }
 
-.category li a:hover{
+.section-title{
+  padding: 20px 10px;
+}
+
+section{
+  padding: 0px 10px;
+}
+.block, .block-2{
+  display: block;
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.block-2{
+  font-size: 12px;
+  color: var(--off-gray);
+}
+.subtitle{
+  font-size: 12px;
+  color: var(--off-gray);
+  margin-bottom: 30px;
+  padding-left: 10px;
+}
+
+
+.category li a:hover {
   color: white;
 }
 
-.container-track{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  height: 250px;
-}
 .album{
-  
+  width: 100%;
 }
-.container-track figure img{
-    display: block;
-    
-    aspect-ratio: 1/1;
+
+.container-track figure img {
+  display: block;
+
+  aspect-ratio: 1/1;
 }
 
 /* Sidebar------------------------------------- */
 
 .sidebar {
   width: var(--sidebar-width);
-  flex-shrink: 0;
+
   background-color: var(--black);
   color: var(--off-gray);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  padding-left: 30px;
   padding-top: 20px;
 }
 
 .logo img {
-  width: 100%;
-  margin-bottom: 15px;
+  width: 75%;
+  margin: 5px 20px;
 }
 
 .nav {
@@ -183,14 +230,42 @@ body {
   padding: 5px;
 }
 
+.menu__item .item-icon {
+  width: 24px;
+}
+
+.menu__item a {
+  display: flex;
+  padding: 8px var(--sidebar-space-x);
+  align-items: center;
+  gap: 8px;
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu__item.active::before,
+.menu__item:hover::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 3px;
+  top: 0;
+  left: 0;
+  background-color: var(--brand-color);
+}
+
 .playlist {
   line-height: 35px;
+  padding-left: 22px;
 }
 
 .instal {
   display: flex;
   flex-direction: column;
-  padding-right: 30px;
+  padding: 5px 22px;
   gap: 10px;
 }
 .container-nav {
@@ -217,7 +292,19 @@ body {
 
 .user {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.fa-user {
+  color: white;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-color: #717171;
+  padding: 2px;
+  font-size: 25px;
+  overflow: hidden;
+  margin-bottom: -6px;
+  margin-right: 5px;
 }
 
 /* Music Player------------------------------- */
@@ -325,29 +412,18 @@ body {
 @media (max-width: 575.99px) {
   .sidebar {
     --sidebar-width: 50px;
-    padding: 8px;
+    --sidebar-space-x: 11px;
   }
   .mob-lg {
     display: block;
   }
-  .logo {
-    width: 100%;
+  .logo img {
+    margin: 5px;
   }
 
   .playlist,
   .dsk-lg,
   h3 {
-    display: none;
-  }
-  .nav li a {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: center;
-    font-size: 24px;
-  }
-
-  .nav li a span {
     display: none;
   }
 
@@ -371,5 +447,20 @@ body {
   }
   .fa-arrow-down {
     font-size: 15px;
+  }
+  .menu__item a {
+    justify-content: center;
+  }
+
+  .menu__item .item-text {
+    display: none;
+  }
+
+  .menu__item.active::before,
+  .menu__item:hover::before {
+    display: none;
+  }
+  .fa-user {
+    margin: 0;
   }
 }

@@ -24,20 +24,30 @@
                         <a href="#"><img class="mob-lg" src="./img/logo-small.svg" alt="logo small" /></a>
                     </div>
                     <ul class="nav">
-                        <li>
-                            <a href="#"><i class="fa-solid fa-house"></i> <span>Home</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i>
-                                <span>Cerca</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-solid fa-book"></i>
-                                <span>La tua libreria</span></a>
-                        </li>
+                        <ul>
+                            <li class="menu__item active">
+                                <!-- ::before -->
+                                <a href="#">
+                                    <img class="item-icon" src="./img/home.svg" alt="" />
+                                    <span class="item-text"> Home </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#">
+                                    <img class="item-icon" src="./img/search.svg" alt="" />
+                                    <span class="item-text"> Cerca </span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#">
+                                    <img class="item-icon" src="./img/libreria.svg" alt="" />
+                                    <span class="item-text"> La tua libreria </span>
+                                </a>
+                            </li>
+                        </ul>
                     </ul>
 
-                    <h3>Playlist</h3>
+                    <h3 class="playlist">Playlist</h3>
                     <ul class="playlist">
                         <li class="hv-create">
                             <a href="#"><i class="fa-solid fa-plus"></i> Crea Playlist</a>
@@ -76,51 +86,123 @@
                         <li><a href="#">SCOPRI</a></li>
                     </ul>
                 </div>
-                <h2>Recently played</h2>
-                <div class="container-track">
-                    <figure class="album">
-                        <img src="./img/metal_lifting.jpg" alt="song">
-                        <caption>
-                            <h5>Heavy Metal</h5>
-                            <span>subtitle</span>
-                        </caption>
-                    </figure>
-                    <figure>
-                        <img src="./img/stranger.jpeg" alt="song">
-                        <caption>
-                            <h5>Heavy Metal</h5>
-                            <span>subtitle</span>
-                        </caption>
-                    </figure>
-                    <figure>
-                        <img src="./img/aquietplace.jpeg" alt="song">
-                        <caption>
-                            <h5>Heavy Metal</h5>
-                            <span>subtitle</span>
-                        </caption>
-                    </figure>
-                    <figure>
-                        <img src="./img/split.jpeg" alt="song">
-                        <caption>
-                            <h5>Heavy Metal</h5>
-                            <span>subtitle</span>
-                        </caption>
-                    </figure>
-                    <figure>
-                        <img src="./img/cure.jpeg" alt="song">
-                        <caption>
-                            <h5>Heavy Metal</h5>
-                            <span>subtitle</span>
-                        </caption>
-                    </figure>
-                    <figure>
-                        <img src="./img/sinister.jpeg" alt="song">
-                        <caption>
-                            <h5>Heavy Metal</h5>
-                            <span>subtitle</span>
-                        </caption>
-                    </figure>
-                </div>
+                <section>
+                    <h2 class="section-title">Recently played</h2>
+                    <div class="container-track">
+                        <div class="row">
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/metal_lifting.jpg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">Heavy Metal</h5>
+                                        <span class="block-2">subtitle</span>
+                                    </caption>
+                                </figure>
+                            </div>
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/stranger.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h5>
+                                        <span class="block-2">Kile Dixon & Michael Stein</span>
+                                    </caption>
+                                </figure>
+                            </div>
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/aquietplace.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">A quiet place</h5>
+                                        <span class="block-2">subtitle</span>
+                                    </caption>
+                                </figure>
+                            </div>
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/split.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">Split</h5>
+                                        <span class="block-2">subtitle</span>
+                                    </caption>
+                                </figure>
+                            </div>
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/cure.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">A cure for wellness</h5>
+                                        <span class="block-2">subtitle</span>
+                                    </caption>
+                                </figure>
+                            </div>
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/sinister.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">Sinister</h5>
+                                        <span class="block-2">subtitle</span>
+                                    </caption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section>
+                    <h2 class="section-title">Creato per John Doe</h2>
+                    <h3 class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</h3>
+                    <div class="container-track">
+                        <div class="row">
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/radar.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">Release Radar</h5>
+                                    </caption>
+                                </figure>
+                            </div>
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/mixdaily.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">Daily Mix 1</h5>
+                                    </caption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section>
+                    <h2 class="section-title">Artisti più popolari</h2>
+                    <h3 class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</h3>
+                    <div class="container-track">
+                        <div class="row">
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/youg.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">Young & beautifull</h5>
+                                        <span class="block-2">subtitle</span>
+                                    </caption>
+                                </figure>
+                            </div>
+                            <div class="col-2 col-gap">
+                                <figure class="album">
+                                    <a href="#"><img src="./img/einaudi.jpeg" alt="song"></a>
+                                    <caption class="caption">
+                                        <h5 class="block">Ludovico Einaudi</h5>
+                                        <span class="block-2">Nuvole bianche</span>
+                                    </caption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
 
